@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  font-family: "Overpass", sans-serif;
+  background-color: hsl(216, 12%, 8%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+
+.card {
+  background-color: hsl(213, 19%, 18%);
+  width: 90%;
+  padding: 1.5em;
+  border-radius: 1.5em;
+  margin: 2em auto;
+}
+
+.heading {
+  margin-bottom: 0.5em;
+  color: hsl(0, 0%, 100%);
+  font-size: 1.6rem;
+}
+
+.paragraph {
+  line-height: 1.7em;
+  margin-top: 0;
+  font-size: 0.9rem;
+}
+
+.paragraph,
+.numbers {
+  color: hsl(217, 12%, 63%);
+}
+
+.numbers {
+  display: flex;
+  justify-content: space-between;
+  margin: 1.7em 0;
+  font-weight: bold;
+}
+
+.circle-star {
+  background-color: hsl(214, 23%, 21%);
+  border-radius: 50%;
+  padding: 1em;
+}
+
+.circle {
+  background-color: hsl(214, 23%, 21%);
+  border-radius: 50%;
+  padding: 0.8em 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 300ms all ease;
+}
+
+.circle:hover {
+  background-color: hsl(25, 97%, 53%);
+  color: hsl(0, 0%, 100%);
+}
+
+/*styles when clicked*/
+.circle:active {
+  background-color: hsl(25, 97%, 53%);
+  color: hsl(0, 0%, 100%);
+}
+
+/*added class with JS to the selected rating*/
+.selected {
+  background-color: hsl(217, 12%, 63%);
+  color: hsl(0, 0%, 100%);
+}
+
+.evaluation button {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(25, 97%, 53%);
+  border: none;
+  width: 100%;
+  padding: 1em;
+  border-radius: 2em;
+  display: block;
+  margin: 0 auto;
+  font-weight: bold;
+}
+
+.evaluation button:active {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(25, 97%, 53%);
+}
+
+.evaluation button:hover {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(25, 97%, 53%);
+  cursor: pointer;
+}
+
+.thankyou {
+  display: none;
+  text-align: center;
+}
+
+.thankyou img {
+  margin-bottom: 1em;
+}
+
+.rating {
+  background-color: hsl(214, 23%, 21%);
+  color: hsl(25, 97%, 53%);
+  border-radius: 1em;
+  padding: 0.4em 1.3em;
+  display: inline-block;
+  margin-bottom: 0.7em;
+}
+
+.evaluation {
+  display: block;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+@media all and (min-width: 500px) {
+  .card {
+    padding: 1.9em;
+    width: 400px;
+  }
+}
